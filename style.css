@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(56, 124, 184);
+}
+
+.main-canvas {
+    border:1px solid black;
+    background-color: #fff;
+    width: 620px;
+    height: 620px;
+    float: left;
+}
+
+.temp-canvas {
+    border: 1px solid black;
+    width: 620px;
+    height: 620px;
+    float: left;
+}
+
+
+.buttons-panel {
+    display:inline-block;
+    width: 130px;
+    height: 620px;
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Кнопки */
+.tool-button {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /*background-color: lightgray;*/
+}
+
+.selected-tool-button {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: lightgreen;
+}
+
+.color-buttons-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 0.4fr);
+    justify-content: center;
+}
+.color-button{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+}
+
+.selected-color-button{
+    border: 3px solid lightgreen;
+}

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Draw</title>
+</head>
+<body>
+    <div class="main-canvas">
+        <canvas id="cnv_img"
+                style="position: absolute;
+                left: 10px;
+                top: 10px;
+                z-index: 0;
+                "
+                width="620" height="620"></canvas>
+
+        <canvas id="cnv"
+                style="position: absolute;
+                left: 10px;
+                top: 10px;
+                z-index: 1;
+                "
+                width="620"  height="620" ></canvas>
+        <canvas id="cnv_tmp"
+                style="
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                z-index: 2;
+                "
+                width="620" height="620"  onmousedown="mouseDown(event)" onmouseup="mouseUp(event)" onmousemove="mouseMove(event)">
+        </canvas>
+    </div>
+    <div class="buttons-panel">
+        <button id="tool1" class="tool-button" type="button" onclick="toolClick(event)">Карандаш</button>
+        <button id="tool2" class="tool-button" type="button" onclick="toolClick(event)">Кисть</button>
+        <button id="tool3" class="tool-button" type="button" onclick="toolClick(event)">Прямоугольник</button>
+
+        <div class="slider">
+            <input id="line-width" type="range" min="0" max="50" onclick="lineWidthClick(event)" disabled>
+        </div>
+        
+        <div class="color-buttons-wrap">
+            <button id="colorWhite" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorBlack" class="color-button selected-color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorRed" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorOrange" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorYellow" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorGreen" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorBlue" class="color-button" type="button" onclick="colorClick(event)"></button>
+            <button id="colorPurple" class="color-button" type="button" onclick="colorClick(event)"></button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
